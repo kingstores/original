@@ -137,7 +137,7 @@ Save_And_Exit () {
     git commit -m backup &> /dev/null
     git branch -M main &> /dev/null
     git remote add origin https://github.com/kingstores/backup
-    git push -f https://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@github.com/kingstores/backup.git &> /dev/null
+    git push -f https://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@github.com/kingstores/backup.git &> /dev/null
 }
 
 if [ ! -d "/root/user-backup/" ]; then
