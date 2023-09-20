@@ -152,7 +152,7 @@ sleep 1
 echo -e "$COLOR1│${NC}  [INFO] Processing updating server...... "
 Save_And_Exit
 fi
-link="https://raw.githubusercontent.com/hokagelegend2023/backup/main/$NameUser/$NameUser.zip"
+link="https://raw.githubusercontent.com/kingstores/backup/main/$NameUser/$NameUser.zip"
 sleep 1
 echo -e "$COLOR1│${NC}  [INFO] Backup done "
 sleep 1
