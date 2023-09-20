@@ -10,7 +10,7 @@ COLBG1="$(cat /etc/hokagevpn/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's
 ###########- END COLOR CODE -##########
 clear
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/hokagelegend2023/akses/main/ijin > /root/tmp
+    curl -sS https://raw.githubusercontent.com/kingstores/akses/main/ijin > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -28,7 +28,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/hokagelegend2023/akses/main/ijin | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/kingstores/akses/main/ijin | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -45,7 +45,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/hokagelegend2023/akses/main/ijin | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/kingstores/akses/main/ijin | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -72,8 +72,8 @@ fi
 
 cd
 MYIP=$(curl -sS ipv4.icanhazip.com)
-NameUser=$(curl -sS https://raw.githubusercontent.com/hokagelegend2023/akses/main/ijin | grep $MYIP | awk '{print $2}')
-cekdata=$(curl -sS https://raw.githubusercontent.com/YakkoXCode74/userbackup/main/$NameUser/$NameUser.zip | grep 404 | awk '{print $1}' | cut -d: -f1)
+NameUser=$(curl -sS https://raw.githubusercontent.com/kingstores/akses/main/ijin | grep $MYIP | awk '{print $2}')
+cekdata=$(curl -sS https://raw.githubusercontent.com/kingstores/userbackup/main/$NameUser/$NameUser.zip | grep 404 | awk '{print $1}' | cut -d: -f1)
 
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} ${COLBG1}             • RESTOR PANEL MENU •             ${NC} $COLOR1│$NC"
@@ -95,7 +95,7 @@ green "│  [INFO] Data found for username $NameUser"
 echo -e "$COLOR1│${NC}  [ ${green}INFO${NC} ] • Restore Data..."
 read -rp "│  Password File: " -e InputPass
 echo -e "$COLOR1│${NC}  [ ${green}INFO${NC} ] • Downloading data.."
-wget -q -O /root/backup/backup.zip "https://raw.githubusercontent.com/hokagelegend2023/backup/main/$NameUser/$NameUser.zip" &> /dev/null
+wget -q -O /root/backup/backup.zip "https://raw.githubusercontent.com/kingstores/backup/main/$NameUser/$NameUser.zip" &> /dev/null
 echo -e "$COLOR1│${NC}  [ ${green}INFO${NC} ] • Getting your data..."
 unzip -P $InputPass /root/backup/backup.zip &> /dev/null
 echo -e "$COLOR1│${NC}  [ ${green}INFO${NC} ] • Starting to restore data..."
